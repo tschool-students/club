@@ -1,31 +1,29 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Noto_Sans_TC } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['100', '300', '400'],
+  display: 'swap',
+  variable: '--font-app-sans',
+})
+
+const notoTC = Noto_Sans_TC({
+  subsets: ['latin'],
+  weight: ['300', '400'],
+  display: 'swap',
+  variable: '--font-app-zh',
+})
 
 export const metadata: Metadata = {
-  title: '社團總覽 | School Clubs',
-  description: '探索數位實中各個社團！',
+  title: '數位實驗高中社團總覽',
+  description: '探索數位實驗高中各社團資訊、章程、社群媒體與幹部名單',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: 'https://tschool-students.github.io/favicon.ico',
+    apple: 'https://tschool-students.github.io/favicon.ico',
   },
 }
 
@@ -35,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="zh-TW">
-      <body className="font-sans antialiased bg-background">
+    <html lang="zh-TW" className={`${inter.variable} ${notoTC.variable}`}>
+      <body className="font-sans antialiased bg-background text-foreground">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

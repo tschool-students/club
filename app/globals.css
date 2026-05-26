@@ -3,80 +3,71 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  --background: oklch(0.97 0.008 85);
-  --foreground: oklch(0.22 0.03 260);
-  --card: oklch(0.99 0.01 90);
-  --card-foreground: oklch(0.22 0.03 260);
-  --popover: oklch(0.99 0.01 90);
-  --popover-foreground: oklch(0.22 0.03 260);
-  --primary: oklch(0.58 0.18 260);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.95 0.015 90);
-  --secondary-foreground: oklch(0.22 0.03 260);
-  --muted: oklch(0.92 0.015 90);
-  --muted-foreground: oklch(0.48 0.025 260);
-  --accent: oklch(0.68 0.16 180);
-  --accent-foreground: oklch(0.22 0.03 260);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.015 90);
-  --input: oklch(0.90 0.015 90);
-  --ring: oklch(0.58 0.18 260);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+/* ─────────────────────────────────────────────────────────────
+   Palette Supply — Warm, Creative Toolkit
+   Light theme. Tokens mapped to:
+   1) Palette Supply brand utilities (bg-canvas, text-graphite, …)
+   2) shadcn semantic variables (--background, --primary, …)
+   ───────────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Brand Colors ── */
+  --color-canvas: #f2f0e9;
+  --color-paper-white: #ffffff;
+  --color-graphite: #141212;
+  --color-ink-black: #000000;
+  --color-ash-gray: #a1a0a0;
+  --color-sage-mist: #d7d7c8;
+  --color-deep-forest: #3f593d;
+  --color-indigo-punch: #3051a8;
+  --color-desert-rose: #e0b9b1;
+  --color-terracotta: #863a29;
+  --color-harvest-gold: #e4b357;
+
+  /* ── Border Radius ── */
+  --radius-md: 5px;
+  --radius-xl: 12px;
+  --radius-full: 100px;
+
+  /* ── Type Scale ── */
+  --text-caption: 12px;
+  --leading-caption: 1.2;
+  --text-body-lg: 16px;
+  --leading-body-lg: 1.54;
+  --text-display: 64px;
+  --leading-display: 0.94;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+:root {
+  /* shadcn semantic tokens — mapped to Palette Supply brand */
+  --background: #f2f0e9;
+  --foreground: #141212;
+  --card: #ffffff;
+  --card-foreground: #141212;
+  --popover: #ffffff;
+  --popover-foreground: #141212;
+  --primary: #3051a8;
+  --primary-foreground: #ffffff;
+  --secondary: #d7d7c8;
+  --secondary-foreground: #141212;
+  --muted: #d7d7c8;
+  --muted-foreground: #a1a0a0;
+  --accent: #3051a8;
+  --accent-foreground: #ffffff;
+  --destructive: #863a29;
+  --destructive-foreground: #ffffff;
+  --border: #000000;
+  --input: #000000;
+  --ring: #3051a8;
+  --radius: 12px;
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans:
+    var(--font-app-sans), 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial',
+    'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --font-mono: var(--font-app-mono), 'Geist Mono', monospace;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -96,30 +87,23 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss02' on;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background-color: rgba(48, 81, 168, 0.15);
+    color: #141212;
   }
 }
