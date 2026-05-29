@@ -18,7 +18,7 @@ const notoTC = Noto_Sans_TC({
 })
 
 export const metadata: Metadata = {
-  title: '數位實驗高中社團總覽',
+  title: '社團資訊彙整｜臺北市數位實驗高中學生自治會',
   description: '探索數位實驗高中各社團資訊、章程、社群媒體與幹部名單',
   generator: 'v0.app',
   icons: {

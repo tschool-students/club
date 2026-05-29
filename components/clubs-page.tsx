@@ -113,10 +113,10 @@ export function ClubsPage({ initialClubs, initialCategories: _, debug }: ClubsPa
         <div className="mx-auto flex h-full max-w-[1600px] items-center justify-between px-5 sm:px-8">
           <a href="#" className="flex flex-col leading-none gap-0.5">
             <span className="text-[14px] font-normal tracking-tight text-graphite">
-              數位實驗高中
+              臺北市數位實驗高級中等學校學生自治會
             </span>
             <span className="text-[10px] font-light tracking-[0.14em] uppercase text-ash-gray">
-              Clubs · 社團總覽
+              社團資訊彙整網頁
             </span>
           </a>
           <div className="flex items-center gap-2.5">
@@ -126,7 +126,7 @@ export function ClubsPage({ initialClubs, initialCategories: _, debug }: ClubsPa
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-1.5 h-8 rounded-full border border-ink-black px-4 text-[12px] font-light text-graphite transition-colors duration-150 hover:bg-graphite hover:text-paper-white"
             >
-              學生會官網
+              學生自治會官網
               <ExternalLink className="h-3 w-3" />
             </a>
           </div>
@@ -178,7 +178,7 @@ export function ClubsPage({ initialClubs, initialCategories: _, debug }: ClubsPa
                 className="text-[80px] xl:text-[108px] font-bold text-center text-graphite"
                 style={{ letterSpacing: "-0.04em", lineHeight: 0.9 }}
               >
-                社團總覽
+                社團資訊彙整
               </h1>
             </div>
 
